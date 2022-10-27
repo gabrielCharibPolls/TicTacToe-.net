@@ -41,6 +41,7 @@
             this.button_22 = new System.Windows.Forms.Button();
             this.labelActualPlayer = new System.Windows.Forms.Label();
             this.labelCourentPlayer = new System.Windows.Forms.Label();
+            this.buttonPlay = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,14 +58,14 @@
             this.panel1.Controls.Add(this.button_00);
             this.panel1.Location = new System.Drawing.Point(25, 76);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(411, 518);
+            this.panel1.Size = new System.Drawing.Size(406, 438);
             this.panel1.TabIndex = 0;
             // 
             // menuStrip1
             // 
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(462, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(455, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -75,6 +76,7 @@
             this.button_00.Size = new System.Drawing.Size(117, 117);
             this.button_00.TabIndex = 0;
             this.button_00.UseVisualStyleBackColor = true;
+            this.button_00.Click += new System.EventHandler(this.button_00_Click);
             // 
             // button_01
             // 
@@ -83,6 +85,7 @@
             this.button_01.Size = new System.Drawing.Size(117, 117);
             this.button_01.TabIndex = 1;
             this.button_01.UseVisualStyleBackColor = true;
+            this.button_01.Click += new System.EventHandler(this.button_01_Click);
             // 
             // button_02
             // 
@@ -91,6 +94,7 @@
             this.button_02.Size = new System.Drawing.Size(117, 117);
             this.button_02.TabIndex = 2;
             this.button_02.UseVisualStyleBackColor = true;
+            this.button_02.Click += new System.EventHandler(this.button_02_Click);
             // 
             // button_10
             // 
@@ -99,6 +103,7 @@
             this.button_10.Size = new System.Drawing.Size(117, 117);
             this.button_10.TabIndex = 3;
             this.button_10.UseVisualStyleBackColor = true;
+            this.button_10.Click += new System.EventHandler(this.button_10_Click);
             // 
             // button_11
             // 
@@ -107,6 +112,7 @@
             this.button_11.Size = new System.Drawing.Size(117, 117);
             this.button_11.TabIndex = 4;
             this.button_11.UseVisualStyleBackColor = true;
+            this.button_11.Click += new System.EventHandler(this.button_11_Click);
             // 
             // button_12
             // 
@@ -115,6 +121,7 @@
             this.button_12.Size = new System.Drawing.Size(117, 117);
             this.button_12.TabIndex = 5;
             this.button_12.UseVisualStyleBackColor = true;
+            this.button_12.Click += new System.EventHandler(this.button_12_Click);
             // 
             // button_20
             // 
@@ -123,6 +130,7 @@
             this.button_20.Size = new System.Drawing.Size(117, 117);
             this.button_20.TabIndex = 6;
             this.button_20.UseVisualStyleBackColor = true;
+            this.button_20.Click += new System.EventHandler(this.button_20_Click);
             // 
             // button_21
             // 
@@ -131,6 +139,7 @@
             this.button_21.Size = new System.Drawing.Size(117, 117);
             this.button_21.TabIndex = 7;
             this.button_21.UseVisualStyleBackColor = true;
+            this.button_21.Click += new System.EventHandler(this.button_21_Click);
             // 
             // button_22
             // 
@@ -139,6 +148,7 @@
             this.button_22.Size = new System.Drawing.Size(117, 117);
             this.button_22.TabIndex = 8;
             this.button_22.UseVisualStyleBackColor = true;
+            this.button_22.Click += new System.EventHandler(this.button_22_Click);
             // 
             // labelActualPlayer
             // 
@@ -158,11 +168,22 @@
             this.labelCourentPlayer.TabIndex = 3;
             this.labelCourentPlayer.Text = "Player :";
             // 
+            // buttonPlay
+            // 
+            this.buttonPlay.Location = new System.Drawing.Point(28, 524);
+            this.buttonPlay.Name = "buttonPlay";
+            this.buttonPlay.Size = new System.Drawing.Size(75, 23);
+            this.buttonPlay.TabIndex = 4;
+            this.buttonPlay.Text = "Play";
+            this.buttonPlay.UseVisualStyleBackColor = true;
+            this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(462, 655);
+            this.ClientSize = new System.Drawing.Size(455, 559);
+            this.Controls.Add(this.buttonPlay);
             this.Controls.Add(this.labelCourentPlayer);
             this.Controls.Add(this.labelActualPlayer);
             this.Controls.Add(this.panel1);
@@ -191,6 +212,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Label labelActualPlayer;
         private System.Windows.Forms.Label labelCourentPlayer;
+        private System.Windows.Forms.Button buttonPlay;
     }
 }
 
