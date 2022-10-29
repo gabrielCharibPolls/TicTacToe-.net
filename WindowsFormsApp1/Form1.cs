@@ -88,6 +88,20 @@ namespace WindowsFormsApp1
             return answer;
         }
 
+        private bool checkDiagonal()
+        {
+            bool answer = false;
+            if(tab[0] == tab[4] && tab[4] == tab[8])
+            {
+                answer = true;
+            }
+            if (tab[2] == tab[4]&& tab[4] == tab[6])
+            {
+                answer = true;
+            }
+            return answer;
+        }
+
         //////////////////////////////////////////////////////////////////////////////
         /// <summary>
         /// tout mes methodes des boutons 
