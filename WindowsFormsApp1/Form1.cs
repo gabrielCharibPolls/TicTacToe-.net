@@ -23,9 +23,14 @@ namespace WindowsFormsApp1
         ///////////////////////////////////////////////////
         /// methode pricipale de jeux 
         ///////////////////////////////////////////////////
-        private void game()
+        private void game(Button ActualeButton,byte indice)
         {
-            
+            updateTab(indice);
+            updateButtonWhenIsClick((Button)ActualeButton);
+            if(checkLine() || checkColone() || checkDiagonal())
+            {
+                MessageBox.Show("fin de la partie");
+            }
         }
         ////////////////////////////////////////////////////////////////////////////
         /// <summary>
@@ -131,70 +136,61 @@ namespace WindowsFormsApp1
             //changer le contenue du button 
             //changer de player 
             //button_00.Text = "X";
-            updateButtonWhenIsClick((Button)sender);
-            updateTab(index);
+            game((Button)sender,index);
         }
 
         private void button_01_Click(object sender, EventArgs e)
         {
             byte index = 1;
-            updateTab(index);
-            updateButtonWhenIsClick((Button)sender);
-            
+            game((Button)sender, index);
+
         }
 
         private void button_02_Click(object sender, EventArgs e)
         {
             byte index = 2;
-            updateTab(index);
-            updateButtonWhenIsClick((Button)sender);
-            
+            game((Button)sender, index);
+
         }
 
         private void button_10_Click(object sender, EventArgs e)
         {
             byte index = 3;
-            updateTab(index);
-            updateButtonWhenIsClick((Button)sender);
-            
+            game((Button)sender, index);
+
         }
 
         private void button_11_Click(object sender, EventArgs e)
         {
             byte index = 4;
-            updateTab(index);
-            updateButtonWhenIsClick((Button)sender);
-           
+            game((Button)sender, index);
+
         }
 
         private void button_12_Click(object sender, EventArgs e)
         {
             byte index = 5;
-            updateTab(index);
-            updateButtonWhenIsClick((Button)sender);
-            
+            game((Button)sender, index);
+
         }
 
         private void button_20_Click(object sender, EventArgs e)
         {
             byte index = 6;
-            updateTab(index);
-            updateButtonWhenIsClick((Button)sender);
-            
+            game((Button)sender, index);
+
         }
 
         private void button_21_Click(object sender, EventArgs e)
         {
             byte index = 7;
-            updateTab(index);
-            updateButtonWhenIsClick((Button)sender);
+            game((Button)sender, index);
         }
 
         private void button_22_Click(object sender, EventArgs e)
         {
             byte index = 8;
-            updateTab(index);
-            updateButtonWhenIsClick((Button)sender);
+            game((Button)sender, index);
         }
 
         private void buttonPlay_Click(object sender, EventArgs e)
