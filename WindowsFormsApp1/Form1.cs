@@ -20,6 +20,27 @@ namespace WindowsFormsApp1
 
         }
 
+        private void clearTheTab()
+        {
+            for (int i = 0; i < tab.Length; i++)
+            {
+                tab[i] = 0;
+            }
+        }
+
+
+        private void clearButton ()
+        {
+            button_00.Text = "";
+            button_01.Text = "";
+            button_02.Text = "";
+            button_10.Text = "";
+            button_11.Text = "";
+            button_21.Text = "";
+            button_22.Text = "";
+            
+        }
+
         ///////////////////////////////////////////////////
         /// methode pricipale de jeux 
         ///////////////////////////////////////////////////
@@ -195,9 +216,11 @@ namespace WindowsFormsApp1
             game((Button)sender, index);
         }
 
-        private void buttonPlay_Click(object sender, EventArgs e)
+        private void buttonReset_Click(object sender, EventArgs e)
         {
-
+            clearTheTab();
+            clearButton();
+            btCourentPlayer = 1;
         }
     }
 }
