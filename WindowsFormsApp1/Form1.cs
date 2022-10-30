@@ -27,10 +27,12 @@ namespace WindowsFormsApp1
         {
             updateTab(indice);
             updateButtonWhenIsClick((Button)ActualeButton);
-            if(checkLine() || checkColone() || checkDiagonal())
+           
+            if (checkLine() || checkColone() || checkDiagonal())
             {
                 MessageBox.Show("fin de la partie");
             }
+           
         }
         ////////////////////////////////////////////////////////////////////////////
         /// <summary>
@@ -41,7 +43,7 @@ namespace WindowsFormsApp1
         /// ///////////////////////////////////////////////////////////////////////
         private void updateTab(byte position)
         {
-            if(btCourentPlayer == 0)
+            if(btCourentPlayer == 1)
             {
                 tab[position] = 0;
             }
@@ -60,15 +62,15 @@ namespace WindowsFormsApp1
         private bool checkLine()
         {
             bool answer = false;
-            if (tab[0] == tab[1] && tab[1] == tab[2])
+            if (tab[0] == tab[1] && tab[1] == tab[2] && tab[1] !=0)
             {
                 answer = true;
             }
-            if (tab[3] == tab[4] && tab[4] == tab[5])
+            if (tab[3] == tab[4] && tab[4] == tab[5] && tab[4] !=0)
             {
                 answer = true;
             }
-            if (tab[6] == tab[7] && tab[7] == tab[8])
+            if (tab[6] == tab[7] && tab[7] == tab[8] && tab[7] !=0)
             {
                 answer = true;
             }
@@ -78,15 +80,15 @@ namespace WindowsFormsApp1
         private bool checkColone()
         {
             bool answer = false;
-            if (tab[0] == tab[3] && tab[3] == tab[6])
+            if (tab[0] == tab[3] && tab[3] == tab[6] && tab[3]!=0)
             {
                 answer = true;
             }
-            if (tab[1] == tab[4] && tab[4] == tab[7])
+            if (tab[1] == tab[4] && tab[4] == tab[7] && tab[4]!=0)
             {
                 answer = true;
             }
-            if (tab[2] == tab[5] && tab[5] == tab[8])
+            if (tab[2] == tab[5] && tab[5] == tab[8] && tab[5] != 0)
             {
                 answer = true;
             }
@@ -96,16 +98,16 @@ namespace WindowsFormsApp1
         private bool checkDiagonal()
         {
             bool answer = false;
-            if(tab[0] == tab[4] && tab[4] == tab[8])
+            if(tab[0] == tab[4] && tab[4] == tab[8] && tab[4] != 0)
             {
                 answer = true;
             }
-            if (tab[2] == tab[4]&& tab[4] == tab[6])
+            if (tab[2] == tab[4]&& tab[4] == tab[6] && tab[4] != 0)
             {
                 answer = true;
             }
             return answer;
-        }
+        }  
 
         //////////////////////////////////////////////////////////////////////////////
         /// <summary>
